@@ -5,43 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="bookmark website" />
     <link rel="icon" href="image/2899445.png" />
-    <title>main</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <title>Bookmark</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header class="my-5">
-      <h1 class="my-5 position-relative d-inline-block translate-middle-x start-50">Bookmarker</h1>
+      <h1
+        class="my-5 position-relative d-inline-block translate-middle-x start-50"
+      >
+        Bookmarker
+      </h1>
     </header>
     <main>
-      <section class="add-book-mark mt-5 container p-4 gap-3 d-flex flex-column">
-          <header class="d-flex align-items-center justify-content-center">
-            <h2 class="fw-semibold"> 
-              <i class="fa-solid fa-bookmark"></i>
-              Bookmark your favorite sites
-              <i class="fa-solid fa-bookmark"></i>
-            </h2>
-          </header>
-          <div class="input-group">
-            <label for="name" class="fw-semibold mb-2 fs-6"> 
-              <i class="fa-solid fa-book-bookmark"></i>
-              Site Name</label>
-          <input type="text" id="name" placeholder="Bookmark Name" name="site-name" class="form-control w-100 rounded-2 " oninput="vaildInput(this)" >
-          </div>
-          <div class="input-group">
-            <label for="url" class="fw-semibold mb-2 fs-6"> 
-              <i class="fa-solid fa-link"></i>
-              Site URL</label>
-          <input type="text" id="url" placeholder="Website URL" class="form-control w-100 rounded-2 " oninput="vaildInput(this)">
-          </div>
-          <button class="btn btn-submit btn-danger w-auto px-5" id="add-btn" disabled>Submit</button>
+      <section
+        class="add-book-mark mt-5 container p-4 gap-3 d-flex flex-column"
+      >
+        <header class="d-flex align-items-center justify-content-center">
+          <h2 class="fw-semibold">
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+        </header>
+        <div class="input-group">
+          <label for="name" class="fw-semibold mb-2 fs-6">
+            <i class="fa-solid fa-book-bookmark"></i>
+            Site Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            placeholder="Bookmark Name"
+            name="site-name"
+            class="form-control w-100 rounded-2"
+          />
+          <p
+            id="alertName"
+            class="mt-2 bg-danger-subtle w-50 me-auto rounded-3 p-2 d-none"
+          >
+            Bookmark Name must be between 3 and 10 letters
+          </p>
+        </div>
+        <div class="input-group">
+          <label for="url" class="fw-semibold mb-2 fs-6">
+            <i class="fa-solid fa-link"></i>
+            Site URL</label
+          >
+          <input
+            type="text"
+            id="url"
+            placeholder="Website URL"
+            class="form-control w-100 rounded-2"
+          />
+          <p
+            id="alertUrl"
+            class="mt-2 bg-danger-subtle w-50 me-auto rounded-3 p-2 d-none"
+          >
+            Please enter a valid url
+          </p>
+        </div>
+        <button
+          class="btn btn-submit btn-danger w-auto px-5"
+          id="add-btn"
+          disabled="ture"
+        >
+          Submit
+        </button>
       </section>
       <table class="table container mt-3 text-center" id="table">
-        <thead class="">
+        <thead class="text-center">
           <tr class="">
             <th>Index</th>
             <th>Website Name</th>
@@ -49,6 +89,7 @@
             <th>Delete</th>
           </tr>
         </thead>
+        <tbody id="tbody"></tbody>
       </table>
     </main>
     <script src="js/script.js"></script>
