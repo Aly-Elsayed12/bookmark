@@ -21,6 +21,7 @@ if (localStorage.getItem("webBookmark") != null) {
   notfound();
   displayWeb(webBookmark);
 }
+notfound();
 // Actions
 
 addBtn.addEventListener("click", function () {
