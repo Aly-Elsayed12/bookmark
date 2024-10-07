@@ -30,15 +30,18 @@ h1:hover::before {
   border-style: dotted;
   border-color: #352e28;
 }
-h2 {
+header h2 {
   font-family: "Righteous", cursive;
   font-size: 25px;
   background-image: linear-gradient(to right, #3ca55c, #b5ac49);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+h2 {
+  font-family: "Pacifico", cursive;
+}
 @media (max-width: 450px) {
-  h2 {
+  header h2 {
     font-size: 20px;
   }
 }
@@ -48,7 +51,35 @@ h2 {
   border-color: #d99c39;
   box-shadow: 0 0 0 0.25rem #fec26055;
 }
-.btn-submit {
+.btn-submit,
+#edit-btn {
   width: fit-content;
   margin: auto;
+}
+#emptySection p {
+  width: fit-content;
+  padding: 60px;
+  font-size: 25px;
+  margin-top: 30px;
+  border-radius: 15px;
+  font-weight: 500;
+}
+.toast {
+  top: 10px;
+  right: 10px;
+}
+.modal.show .modal-dialog {
+  transform: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+}
+.modal-backdrop.fade {
+  display: none;
+}
+
+#table {
+  min-width: 600px;
 }
